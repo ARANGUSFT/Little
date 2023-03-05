@@ -1,0 +1,69 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'Css/login.css'%}">
+    <title>Registro</title>
+</head>
+<body>
+      
+    <section>
+      <div class="form-box">
+          <div class="form-value">
+              
+            
+              <form action="" method="post">
+                  {% csrf_token %}
+
+                  <h2>Registro</h2>
+
+
+                  <div class="inputbox">
+                    <ion-icon name="paw-outline"></ion-icon>
+                    <input type="text" name="apodo" autocomplete="off" required>
+                    <label for="">Apodo</label>
+                </div>
+
+                  <div class="inputbox">
+                      <ion-icon name="mail-outline"></ion-icon>
+                      <input type="email" name="email" autocomplete="off" required>
+                      <label for="">Email</label>
+                  </div>
+
+                  <div class="inputbox">
+                      <ion-icon name="lock-closed-outline"></ion-icon>
+                      <input type="password" name="contrasena1" required>
+                      <label for="">Contraseña</label>
+                  </div>
+
+                  <!-- <div class="inputbox">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <input type="password" name="contrasena2" required>
+                    <label for="">Confirmar Contraseña</label>
+                </div> -->
+
+                  
+
+                  <button>Registrarse</button>
+
+              </form>
+          </div>
+      </div>
+  </section>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+         
+    <!-- {% if messages %}
+       {% for mensaje in messages %}
+         <h1>{{ mensaje }}</h1>
+       {% endfor %}
+     {% endif %} -->
+
+</form>
+</body>
+</html>

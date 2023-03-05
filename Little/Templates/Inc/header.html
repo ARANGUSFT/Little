@@ -1,0 +1,63 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'Css/semantic.css'%}">
+    <link rel="stylesheet" href="{% static 'Css/estilo.css'%}">
+    <link rel="stylesheet" href="{% static 'Css/home.css'%}">
+    <script src="{% static 'Js/jquery-3.1.1.min.js'%}"></script>
+    <script src="{% static 'Js/semantic.js'%}"></script>
+    <title>Little pet world</title>
+
+
+<nav class="nav">
+    <div class="container">
+        <div class="logo">
+            <img class="as" src="{% static 'Img/logo-pet.png'%}" alt="logo">
+        </div>
+        <div id="mainListDiv" class="main_list">
+            <ul class="navlinks">
+                <li><a href="#">Editar perfil</a></li>
+                <li><a href="#">Cerrar session</a></li>
+            </ul>
+        </div>
+        <span class="navTrigger">
+            <i></i>
+            <i></i>
+            <i></i>
+        </span>
+    </div>
+</nav>
+
+<style>
+  .as{
+    margin: 10px;  float: left; width: 50px;
+  }  
+
+  #placa{
+    border-radius: 20px;
+	border: 1px solid #e5a818;
+	background: linear-gradient(to right, #E59866, #f6dd21);
+	color: #FFFFFF;
+	font-size: 25px;
+	font-weight: bold;
+	padding: 12px 20px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 10px 10px rgba(0,0,0,0.5);
+    
+ }
+
+
+ 
+</style>
