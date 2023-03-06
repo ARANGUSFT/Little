@@ -23,7 +23,25 @@ def home(request):
 #endregion
 
 
+#region Editarperfil
 
+def actualizarperfil(request,idusuario):
+    if request.method == "POST":
+        if request.POST.get('apodo') and request.POST.get('email') and request.POST.get('contrasena'):
+
+            usuario = Usuarios.objects.get(id=idusuario)
+            usuario.Apodo = request.POST.get('apodo')
+            usuario.Email = request.POST.get('email')
+            usuario.Contrasena = request.POST.get('contrasena')
+           
+            usuario.save()
+            return redirect('/Home/principal')
+    else:
+        usuario = Usuarios.objects.filter(id=idusuario)
+        return render(request,'Home/actualizar.html',{'usuario':usuario})
+
+    
+#endregion
 
 
 
@@ -64,7 +82,7 @@ def entrar(request):
         ...
     else:
         # Return an 'invalid login' error message.
-        return render(request,'Usuarios/registro.html')
+        return render(request,'Usuarios/elegir.html')
         ...
 
 
@@ -72,12 +90,12 @@ def entrar(request):
 #FUNCION PARA CARGAR EL REGISTRO
 def registro(request):
     if request.method == "POST":
-        if request.POST.get('apodo') and request.POST.get('email') and request.POST.get('contrasena1'):
+        if request.POST.get('apodo') and request.POST.get('email') and request.POST.get('contrasena'):
          #and request.POST.get('contrasena2')# 
             empleado = Usuarios()
             empleado.Apodo = request.POST.get('apodo')
             empleado.Email = request.POST.get('email')
-            empleado.Contrasena = request.POST.get('contrasena1')
+            empleado.Contrasena = request.POST.get('contrasena')
             empleado.save()
             # messages.success(request, "La cuenta se creo exitosamente")
             return redirect('/Usuarios/login') 
