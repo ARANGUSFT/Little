@@ -1,0 +1,39 @@
+
+{% for u in usuario%}
+
+<br><br>
+<div class="ui container">
+    <h1 text align=" center"> Actualizar Perfil</h1>
+</div>
+
+<form action="" class="ui form" method="POST">
+
+    {% csrf_token %}
+
+    <div class="two fields">
+    <div class="field">
+      <label>Apodo</label>
+      <input type="text" name="apodo" value="{{ u.Apodo}}" placeholder="Apodo" required>
+    </div>
+
+    <div class="field">
+      <label>Email</label>
+      <input type="email" name="email" value="{{ u.Email }}" placeholder="Correo" required>
+    </div>
+
+</div>
+
+    <div class="field">
+        <label>Celular</label>
+        <input type="password" name="contrasena" value="{{ u.Contrasena }}" placeholder="Contraseña" required>
+      </div>
+
+
+   
+
+    <button class="ui button" type="submit">Guardar</button>
+    
+  </form>
+
+
+{% endfor %}

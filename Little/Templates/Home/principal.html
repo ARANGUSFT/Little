@@ -1,18 +1,7 @@
 {% include "Inc/header.html" %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
-</head>
-<body>
-   
 
-   
       <section id="boton">
         <button id="placa">Fabricar Placa</button>
       </section>
@@ -40,11 +29,11 @@
 
                 <b class="titulos">Tiempo de entrega?:</b>Una vez la compra se haya realizado el producto se enviara a la direccion registrda y tardara 3 a 5 dias. <br><br>
 
-                <b class="titulos">Que hacer si mi mascota se pierde con la placa?:</b> Si en algun momento tu mascota se llega a estraviar entre la comunidad se
+                <b class="titulos">Que hacer si mi mascota se pierde con la placa?:</b> Si en algun momento tu mascota se llega a estraviar, entre la comunidad se
                  podran ayudar adar la ubicacion de esta.
             </p><br><br><br>
 
-            <img class="as" src="{% static 'Img/'%}" alt="logo">
+            
 
         
         </section>
@@ -58,7 +47,7 @@
         <section id="dos">
           
 
-            <h2 class="myH2" id="titt">PLACAS<h2><br><br>
+            <h2 class="myH2" id="titt">PLACAS<h2><br>
 
             <h5>
                 <b class="myP" id="titulos">Descripcion</b>
@@ -72,22 +61,21 @@
             <h5>
                 <b id="titulos" class="myP">Caracteristicas</b>
             </h5>
+            
 
             <p class="myP" >
-
             -Dimensiones: 24x33mm. (ancho x alto) <br>
             -Peso:  15g <br>
             -Material:  metal <br>
             -Codigo QR:  codigo unico <br>
             </p>
+            <br>
 
-
-            
-        
-
-       
-
+           <center><img class="ui medium circular image" src="{% static 'Img/02.PNG'%}" alt="imagen"></center>
         </section>
+
+
+
 
 
 
@@ -99,27 +87,31 @@
 
                 <p class="myP">Sabemos el cariño que las personas pueden llegar a tener por estos nuevos integrantes de la familia, y lo que menos queremos es no volver a verlos por eso nos enfocamos en un forma de reducir
                 las perdidas de estas, y de esta problematica nacio <b class="titulos">Little pet world</b>, un pequeño mundo de mascotas en el cual toda la comunidad
-                del comun podremos ayudarnos entre todos a dar con la ubicacion de esta.<br>
+                se podran ayudar a dar con la ubicacion de esta. <br>   <a href="#boton" class="titulos">QUE ESPERAS PARA UNIRTE A LA MANADA</a><br>
+                
+              </p>
 
-                <a href="#boton" class="titulos">QUE ESPERAS PARA UNIRTE A LA MANADA</a></p>
 
-
-                <img class="as" src="{% static 'Img/'%}" alt="logo">
-
+               <center> <img class="imgg" src="{% static 'Img/logo-pet.png'%}" alt="imagen" ></center>
 
         </section>
+
+        
     </div>
+
+
+
+
+
+
+
+
+
+    
     
 
 
     
-
-
-
-
-
-
-
 
 
 <style>
@@ -136,10 +128,6 @@
     color: #f0910a;
 }
 
-#imgg{
-    
-    padding: 50%;
-}
 </style>
 
 
@@ -167,14 +155,8 @@
     $("#mainListDiv").fadeIn();
 
 });
-
 </script>
 
-  
 
-
-
-</body>
-</html>
 
 {% include "Inc/footer.html" %}
