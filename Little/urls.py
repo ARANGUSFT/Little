@@ -15,15 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from Little.views import crearcuenta,entrar,registro,home,actualizarperfil
+from Little.views import crearcuenta,insertarusuario,loginusuario,logoutusuario
+from Little.views import home,actualizarperfil
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     
     #Login
     path("Usuarios/crearcuenta/", crearcuenta),
-    path("Usuarios/login/", entrar),
-    path("Usuarios/registro/", registro),
+    path("Usuarios/registro/", insertarusuario),
+    path("Usuarios/login/", loginusuario),
+    path('Usuarios/logout/', logoutusuario),
+    
     
     #Home
     path("Home/principal/", home),

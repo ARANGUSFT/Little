@@ -17,17 +17,17 @@
                 <form action="" method="POST">
                     {% csrf_token %}
 
-                    <h2>Iniciar Session</h2>
+                    <h2>Iniciar Sesion</h2>
 
                     <div class="inputbox">
                         <ion-icon name="mail-outline"></ion-icon>
-                        <input type="email" name="email" autocomplete="off" required>
-                        <label for="">Email</label>
+                        <input type="text" name="username" autocomplete="off" required>
+                        <label for="">Apodo</label>
                     </div>
 
                     <div class="inputbox">
                         <ion-icon name="lock-closed-outline"></ion-icon>
-                        <input type="password" name="contrasena" required>
+                        <input type="password" name="password" required>
                         <label for="">Contraseña</label>
                     </div>
 
@@ -38,8 +38,16 @@
                     <button>Iniciar</button>
 
                     <div class="register">
-                        <p>Crear cuenta <a href="#">Registrarse</a></p>
+                        <p>Crear cuenta <a href="/Usuarios/registro">Registrarse</a></p>
                     </div>
+
+                    <h4 style="color: red" >
+                        {% if mensaje %}
+                           {{ mensaje }}
+                        {% endif %}
+                
+                    </h4>
+                
 
                 </form>
             </div>
