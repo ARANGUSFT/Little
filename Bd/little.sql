@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-03-2023 a las 04:55:58
+-- Tiempo de generación: 11-03-2023 a las 23:52:47
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.1.12
 
@@ -110,6 +110,13 @@ CREATE TABLE `auth_user` (
   `is_active` tinyint(1) NOT NULL,
   `date_joined` datetime(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `auth_user`
+--
+
+INSERT INTO `auth_user` (`id`, `password`, `last_login`, `is_superuser`, `username`, `first_name`, `last_name`, `email`, `is_staff`, `is_active`, `date_joined`) VALUES
+(12, 'pbkdf2_sha256$390000$gJR4E494ypLTZ6VrZZEVXb$15kDYIPSy53OsGzE+Io1kRUPikYy9D992ZNx6Y/I2Ds=', '2023-03-11 22:49:11.401871', 0, 'ARANGUSFT', '', '', 'santiagoaranngo505@gmail.com', 0, 1, '2023-03-11 20:25:30.651337');
 
 -- --------------------------------------------------------
 
@@ -226,25 +233,13 @@ CREATE TABLE `django_session` (
   `expire_date` datetime(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- --------------------------------------------------------
-
 --
--- Estructura de tabla para la tabla `usuarios`
+-- Volcado de datos para la tabla `django_session`
 --
 
-CREATE TABLE `usuarios` (
-  `id` int(11) NOT NULL,
-  `Apodo` varchar(12) NOT NULL,
-  `Email` varchar(150) NOT NULL,
-  `Contrasena` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Volcado de datos para la tabla `usuarios`
---
-
-INSERT INTO `usuarios` (`id`, `Apodo`, `Email`, `Contrasena`) VALUES
-(1, 'Arangus', 'santiagoaranngo505@gmail.com', '123');
+INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES
+('69q28w40dty8fwvj9pbeerxn2h56hiox', '.eJxVjEEOwiAQRe_C2hAG6AAu3fcMZCgTqRpISrsy3t2QdKHb_977bxHp2Es8Om9xzeIqQIvL75hoeXIdJD-o3ptcWt23NcmhyJN2ObfMr9vp_h0U6mXUE4NmywCkEUIwzqL3CtwCPqAiD3oC5RQaZkzWaghMRmFSOaPLXny-yPM2fQ:1pb81X:sBK2TYIbNSvkcH5jgzo1XAx3dU0wtKhYBHuuvy1Rtz8', '2023-03-25 22:49:11.406806'),
+('d3vm49l4r7dvem7uwlurtctvk0bfe4if', '.eJxVjDEOwjAMRe-SGUWxSUBmZOcMlZ04pIASqWmnirtDpQ6w_vfeX83Ay1yGpes0jMlcDIA5_I7C8al1I-nB9d5sbHWeRrGbYnfa7a0lfV139--gcC_fOoJ4QWQCRkCRQIFi8ogYWMglDKQuZ-dBBXM8UnRez6yew0lJ2bw_Bgs4dg:1pZlPC:kV4fwD_OUuI1OHtwmFV6TJibPC-DlpXRRt4id28kwyM', '2023-03-22 04:27:58.976191');
 
 --
 -- Índices para tablas volcadas
@@ -324,12 +319,6 @@ ALTER TABLE `django_session`
   ADD KEY `django_session_expire_date_a5c62663` (`expire_date`);
 
 --
--- Indices de la tabla `usuarios`
---
-ALTER TABLE `usuarios`
-  ADD PRIMARY KEY (`id`);
-
---
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -355,7 +344,7 @@ ALTER TABLE `auth_permission`
 -- AUTO_INCREMENT de la tabla `auth_user`
 --
 ALTER TABLE `auth_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `auth_user_groups`
@@ -386,12 +375,6 @@ ALTER TABLE `django_content_type`
 --
 ALTER TABLE `django_migrations`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
-
---
--- AUTO_INCREMENT de la tabla `usuarios`
---
-ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Restricciones para tablas volcadas

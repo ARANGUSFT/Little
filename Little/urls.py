@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from Little.views import crearcuenta,insertarusuario,loginusuario,logoutusuario
-from Little.views import home,actualizarperfil
+from Little.views import home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,7 +30,7 @@ urlpatterns = [
     
     #Home
     path("Home/principal/", home),
-    path("Home/actualizar/<int:idusuario>", actualizarperfil)
+    
     
 ]
  

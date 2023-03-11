@@ -2,9 +2,10 @@
 {% load static %}
 
 
-      <section id="boton">
-        <button id="placa">Fabricar Placa</button>
-      </section>
+    <section id="boton">
+        <button class="placa">Fabricar Placa</button>
+    </section>
+      
 
     <section class="home">
     </section>
@@ -71,7 +72,7 @@
             </p>
             <br>
 
-           <center><img class="ui medium circular image" src="{% static 'Img/02.PNG'%}" alt="imagen"></center>
+           <center><img class="imgg"  src="{% static 'Img/02.PNG'%}" alt="imagen"></center>
         </section>
 
 
@@ -101,19 +102,6 @@
 
 
 
-
-
-
-
-
-
-    
-    
-
-
-    
-
-
 <style>
     
 .titulos{
@@ -128,34 +116,36 @@
     color: #f0910a;
 }
 
+
+.imgg{
+    background-position: center;
+}
+
+.placa{
+    border-radius: 20px;
+	border: 1px solid #e5a818;
+	background: linear-gradient(to right, #E59866, #f6dd21);
+	color: #FFFFFF;
+	font-size: 25px;
+	font-weight: bold;
+	padding: 12px 20px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 10px 10px rgba(0,0,0,0.5);
+    background-position: center;
+    
+ }
+
 </style>
 
 
 
 
-
-
-<script>
-        $(window).scroll(function() {
-            if ($(document).scrollTop() > 50) {
-                $('.nav').addClass('affix');
-                console.log("OK");
-            } else {
-                $('.nav').removeClass('affix');
-            }
-        });
-</script>
-   
-
-<script>
-    $('.navTrigger').click(function () {
-    $(this).toggleClass('active');
-    console.log("Clicked menu");
-    $("#mainListDiv").toggleClass("show_list");
-    $("#mainListDiv").fadeIn();
-
-});
-</script>
 
 
 
